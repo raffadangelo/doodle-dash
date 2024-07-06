@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@600&display=swap'); /* Importa Cascadia Code SemiBold */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Showcard Gothic", "Broadway";
+        }
+
+        header {
+            background-color: #ffffff; /* Bianco */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px; /* Altezza del logo uniformata */
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu a {
+            background-color: #0a21c0; /* Blu */
+            color: #ffffff; /* Testo bianco */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione */
+        }
+
+        .menu a:hover {
+            background-color: #06227e; /* Sfumatura più scura al passaggio del cursore */
+            transform: scale(1.05); /* Ingrandisci leggermente al passaggio del cursore */
+        }
+
+        .main-content {
+            display: flex; /* Mostra i contenuti come un layout flessibile */
+            align-items: flex-start; /* Allinea gli elementi sulla parte superiore */
+            margin-left: 150px; /* Aggiungi margine sinistro */
+        }
+
+        .main-title {
+            color: #0a21c0; /* Blu */
+            font-size: 48px; /* Aumenta la dimensione del testo */
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombra testo */
+            margin-right: 50px; /* Aggiungi margine destro */
+        }
+
+        .about-text {
+            color: #333333; /* Nero */
+            font-size: 18px;
+            line-height: 1.6;
+            margin-left: 20px; /* Aggiungi margine sinistro */
+            padding: 20px; /* Aggiungi spazio interno */
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra */
+            background-color: #f2f2f2; /* Grigio chiaro */
+            border-radius: 5px; /* Bordi arrotondati */
+            margin-right: 50px; /* Aggiungi margine destro */
+            height: auto; /* Altezza automatica per espandere con il testo */
+            margin-bottom: 100px; /* Spazio tra il testo e il footer */
+        }
+
+        .about-text p {
+            margin-bottom: 10px;
+            text-indent: 20px; /* Aggiungi rientro al primo carattere */
+        }
+        
+        .profile-img {
+            margin-top: 50px; /* Spazio sopra l'immagine */
+            max-width: 300px; /* Larghezza massima dell'immagine */
+            border-radius: 5px; /* Bordi arrotondati */
+            margin-right: 50px; /* Riduci margine destro */
+        }
+
+        footer {
+            background-color: #0a21c0; /* Blu */
+            color: #ffffff; /* Testo bianco */
+            font-family: 'Cascadia Code', monospace; /* Font Cascadia Code SemiBold */
+            font-weight: 600;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .social-icons img {
+            width: 50px; /* Larghezza dei loghi */
+            height: 50px; /* Altezza dei loghi */
+            margin: 0 10px; /* Margine tra i loghi */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo_attivita.png" alt="Logo">
+    </div>
+    <nav class="menu">
+        <a href="index.html">Homepage</a>
+        <a href="aboutme.html">About me</a>
+        <a href="Contactus.html">Contact Us</a> <!-- Nuovo pulsante aggiunto -->
+        <a href="Artworks.html">Artworks</a>
+        <a href="store.html">Store</a>
+    </nav>
+</header>
+
+<div class="main-content">
+    <img class="profile-img" src="img/me_pictures.png" alt="Raffaele D'Angelo">
+    <div class="about-text">
+        <h1 class="main-title">Who am I?</h1>
+        <p>Hi! My name is Raffaele D'Angelo, I'm 16 years old and I live in Italy with my family.
+           I'm a studious guy and I love drawing! I created this website to share my passion for drawing superheroes, anime and manga with the whole world.</p>
+        <p>In the various sections of the site you will find my gallery, my store where you can buy my drawings! Keep following me for new creations and artistic adventures!</p>
+        <p>I started drawing when I was a child, and over the years, I have developed my skills through constant practice and learning.
+           My favorite characters to draw are superheroes because they inspire me to create stories of bravery and heroism.</p>
+        <p>Besides drawing, I enjoy watching anime and reading manga, which fuel my creativity and provide endless inspiration for my art.</p>
+        <p>My dream is to become a professional artist and to see my characters come to life in comics and animations.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Doodle Dash Website, Copyright Raffaele D'Angelo © 2024</p>
+    <p>My Social Networks:</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook_logo_.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram_logo.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="img/x_logo.png" alt="Twitter"></a>
+    </div>
+</footer>
+
+</body>
+</html>

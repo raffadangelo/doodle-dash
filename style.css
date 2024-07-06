@@ -1,0 +1,103 @@
+body {
+    font-family: "Showcard Gothic", "Broadway";
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    height: 100px; /* Altezza del logo aumentata */
+}
+nav {
+    display: flex;
+    gap: 10px; /* Spazio tra le caselle del menù */
+}
+nav a {
+    padding: 10px 20px;
+    background-color: #0A21C0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Arrotondamento degli angoli delle caselle */
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transizione al passaggio del mouse */
+    position: relative; /* Posizionamento relativo per l'effetto di ombreggiatura */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ombreggiatura sottile */
+}
+nav a:hover {
+    background-color: #08249a; /* Colore delle caselle al passaggio del mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Ombreggiatura più intensa al passaggio del mouse */
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Sfondo trasparente */
+    transition: background-color 0.3s ease; /* Transizione al passaggio del mouse */
+    border-radius: 5px; /* Arrotondamento degli angoli delle caselle */
+    z-index: -1; /* Metti dietro il testo */
+}
+nav a:hover::before {
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondo trasparente con leggera opacità al passaggio del mouse */
+}
+.hero-image {
+    background-image: url('img/hero_image.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Altezza della hero image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero-title {
+    font-size: 48px; /* Dimensione del testo aumentata */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra del testo */
+}
+.about-me-box {
+    background-color: #0A21C0;
+    padding: 10px 20px; /* Ridimensionamento del padding */
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transizioni al passaggio del mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombreggiatura */
+}
+.about-me-box:hover {
+    background-color: #08249a; /* Cambia il colore al passaggio del mouse */
+    transform: translateY(2px); /* Effetto di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombreggiatura più intensa al passaggio del mouse */
+}
+.about-me-box h2 {
+    color: white; /* Colore del testo bianco */
+}
+.space-above-footer {
+    height: 50px; /* Spazio di 50px tra la hero image e il footer */
+}
+footer {
+    background-color: #0A21C0;
+    color: white;
+    text-align: center;
+    font-family: "Cascadia Code SemiBold", monospace;
+    padding: 20px 0;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}

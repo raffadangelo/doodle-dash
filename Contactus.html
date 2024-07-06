@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Include the Cascadia Code font -->
+    <style>
+        @font-face {
+            font-family: 'Cascadia Code';
+            src: url('path/to/CascadiaCode.woff2') format('woff2'),
+                 url('path/to/CascadiaCode.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Showcard Gothic", "Broadway", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+
+        header img {
+            height: 100px; /* Altezza del logo */
+        }
+
+        nav {
+            display: flex;
+            gap: 10px; /* Spazio tra le caselle del menù */
+        }
+
+        nav a {
+            padding: 10px 20px;
+            background-color: #0A21C0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px; /* Arrotondamento degli angoli delle caselle */
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transizione al passaggio del mouse */
+            position: relative; /* Posizionamento relativo per l'effetto di ombreggiatura */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ombreggiatura sottile */
+        }
+
+        nav a:hover {
+            background-color: #08249a; /* Colore delle caselle al passaggio del mouse */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Ombreggiatura più intensa al passaggio del mouse */
+        }
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0); /* Sfondo trasparente */
+            transition: background-color 0.3s ease; /* Transizione al passaggio del mouse */
+            border-radius: 5px; /* Arrotondamento degli angoli delle caselle */
+            z-index: -1; /* Metti dietro il testo */
+        }
+
+        nav a:hover::before {
+            background-color: rgba(255, 255, 255, 0.1); /* Sfondo trasparente con leggera opacità al passaggio del mouse */
+        }
+
+        .contact-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 75px; /* Distanza dal footer */
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            color: #0A21C0;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #0A21C0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #08249a;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            background-color: #0A21C0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto;
+            font-family: 'Cascadia Code', monospace; /* Cambia il font del footer */
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo_attivita.png" alt="Logo Attività">
+        <nav>
+            <a href="index.html">Homepage</a>
+            <a href="aboutme.html">About me</a>
+            <a href="Contactus.html">Conact Us</a> <!-- Nuovo pulsante aggiunto -->
+            <a href="Artworks.html">Artworks</a>
+            <a href="store.html">Store</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h2>Text Us!</h2>
+        <form class="contact-form" action="https://formspree.io/f/mblrjrza" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email (example@domain.tdl)" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>Doodle Dash Website, Copyright Raffaele D'Angelo © 2024</p>
+        <p>My Social Networks:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook_logo_.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram_logo.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="img/x_logo.png" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>

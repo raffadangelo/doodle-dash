@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <style>
+        body {
+            font-family: "Showcard Gothic", "Broadway", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header img {
+            margin-left: 20px;
+            height: 100px; /* Altezza del logo uniformata */
+        }
+        header nav {
+            margin-right: 20px;
+        }
+        header nav a {
+            color: white;
+            background-color: #0a21c0;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: #081a9b;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .title {
+            color: #0a21c0;
+            text-align: center;
+            margin: 50px 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        .gallery-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .gallery-row {
+            display: flex;
+            gap: 50px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .artwork {
+            width: 210px;
+            height: 297px;
+            background-color: #0a21c0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .artwork:hover {
+            transform: translateY(-5px);
+        }
+
+        .artwork-description {
+            width: 210px;
+            background-color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 10px;
+            color: black;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        footer {
+            background-color: #0a21c0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-family: "Cascadia Code", monospace;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Stili per il modale */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: 15% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-content img {
+            width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo_attivita.png" alt="Logo Attività">
+        <nav>
+            <a href="index.html">Homepage</a>
+            <a href="aboutme.html">About me</a>
+            <a href="Contactus.html">Conact Us</a> <!-- Nuovo pulsante aggiunto -->
+            <a href="Artworks.html">Artworks</a>
+            <a href="store.html">Store</a>
+        </nav>
+    </header>
+    <h1 class="title">My Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-column">
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/The_Mask.jpg');"></div>
+                    <a href="#" class="artwork-description">The Mask</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/Jackie_Chan.jpg');"></div>
+                    <a href="#" class="artwork-description">Jackie Chan</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/Padrino.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">Padrino</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/Schwarzenegger.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">Schwarzenegger</a>
+                </div>
+            </div>
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/CR7.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">CR7</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/SnoopDog.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">SnoopDog</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/Michael_Jordan.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">Michael Jordan</a>
+                </div>
+                <div class="gallery-item">
+                    <div class="artwork" onclick="openModal(this)" style="background-image: url('img/gallery/Gohan.jpg');"></div>
+                    <a href="aboutme.html" class="artwork-description">Gohan Beast</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale per l'ingrandimento -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Doodle Dash Website, Copyright Raffaele D'Angelo © 2024</p>
+        <p>My Social Networks:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook_logo_.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram_logo.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="img/x_logo.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImage');
+
+            // Usa lo sfondo del div cliccato come immagine del modale
+            modalImg.src = element.style.backgroundImage.slice(5, -2);
+
+            modal.style.display = 'block';
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+    </script>
+</body>
+</html>
