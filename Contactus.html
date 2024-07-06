@@ -170,10 +170,12 @@
 
     <div class="contact-container">
         <h2>Text Us!</h2>
-        <form class="contact-form" action="https://formspree.io/f/mblrjrza" method="post" enctype="text/plain">
+        <form class="contact-form" action="https://formspree.io/f/mblrjrza" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email (example@domain.tdl)" required>
             <input type="text" name="subject" placeholder="Subject" required>
+            <input type="hidden" name="_next" value="https://raffadangelo.github.io/doodle-dash/Contactus.html" />
+            <input type="hidden" name="_subject" value="Doodle-Dash Contact Form Submission" />
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
